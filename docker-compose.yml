@@ -13,6 +13,8 @@ services:
     docker:
         image: docker:dind
         privileged: true
+        environment:
+            DOCKER_TLS_CERTDIR: /certs
 
 volumes:
     jenkins-data:
