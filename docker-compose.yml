@@ -1,6 +1,6 @@
 services:
     jenkins:
-        image: jenkinsci/blueocean
+        image: jenkins/jenkins
         ports:
             - "8000:8080"
         environment:
