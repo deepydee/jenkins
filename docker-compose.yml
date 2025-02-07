@@ -1,8 +1,15 @@
 services:
+    nginx:
+        image: nginx:alpine
+        ports:
+            - "8000:8000"
+        volumes:
+            - ./docker/development/nginx/conf.d:/etc/nginx/conf.d
+        depends_on:
+            - jenkins
+
     jenkins:
         image: jenkins/jenkins
-        ports:
-            - "8000:8080"
         environment:
             DOCKER_HOST: tcp://docker:2376
             DOCKER_CERT_PATH: /certs/client
