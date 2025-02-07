@@ -1,0 +1,3 @@
+certbot_email: mail@rlbs.site
+certbot_hosts:
+    - jenkins.rlbs.site
