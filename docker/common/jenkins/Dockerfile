@@ -1,7 +1,7 @@
-FROM jenkins/jenkins
+FROM jenkins/jenkins:alpine
 
 USER root
 
-RUN apt-get update && apt-get install -y libffi-dev openssl libssl-dev gcc libc-dev make gettext
+RUN apk add --no-cache libffi-dev openssl-dev gcc libc-dev make docker-cli-compose
 
 USER jenkins
