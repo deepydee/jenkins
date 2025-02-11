@@ -13,7 +13,8 @@ services:
             - jenkins
 
     jenkins:
-        image: jenkins/jenkins
+        build:
+            context: ./docker/common/jenkins
         restart: always
         environment:
             DOCKER_HOST: tcp://docker:2376
